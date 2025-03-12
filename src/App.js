@@ -8,6 +8,7 @@ import Banner from './Components/Banner';
 import ContactForm from './Components/ContactForm';
 import Footer from './Components/Footer';
 import ProductList from './ProductList';
+import ProductDetails from './ProductDetails';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
                     <Route path="/products" element={<ProductList />} />
+                    <Route path="/products/:id" element={<ProductDetails />} />
                 </Routes>
                 <Banner />
                 <section id="hero" className="hero">

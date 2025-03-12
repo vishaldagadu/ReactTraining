@@ -11,6 +11,16 @@ const ProductService = {
             console.error('Error fetching products:', error);
             throw error;
         }
+        
+    },
+    getProductById: async (id) => {
+        try {
+            const response = await axios.get(`<span class="math-inline">\{API\_BASE\_URL\}/</span>{id}`);
+            return response.data;
+        } catch (error) {
+            console.error(`Error fetching product with ID ${id}:`, error);
+            throw error;
+        }
     },
     // You can add more API call functions here as needed
 };
